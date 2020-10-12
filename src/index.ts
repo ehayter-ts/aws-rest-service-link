@@ -79,7 +79,7 @@ function onexecuteTodoGet(properties: SingleRecord): Promise<void> {
         };
         
         if(typeof properties["id"] !== "number") throw new Error("properties[\"id\"] is not of type number");
-        xhr.open("GET", 'https://petstore.execute-api.eu-west-2.amazonaws.com/petstore/pets');
+        xhr.open("GET", 'http://petstore.execute-api.eu-west-2.amazonaws.com/petstore/pets');
         xhr.setRequestHeader('test', 'test value');
         xhr.send();
     });
